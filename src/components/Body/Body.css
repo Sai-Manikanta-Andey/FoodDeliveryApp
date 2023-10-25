@@ -1,0 +1,28 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    
+}
+.filter{
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+}
+.search{
+    display: flex;
+    gap: .5rem;
+}
+
+.search-input{
+    padding: 1rem 2rem;
+    outline: none;
+    border-radius: 5px;
+    border:  2px solid black;
+}
+
+@media (min-width:1280px) {
+    .body{
+        max-width: 1200px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,32 @@
+.res-container{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+.res-card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 250px;
+    max-height: 400px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 1rem;
+    transition: all 300ms ease;
+}
+.resCard-img{
+    border-radius: 5px;
+    width: 250px;
+    object-fit: contain;
+    object-position: center;
+}
+.res-details{
+    margin-top: .7rem;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.res-card:hover{
+    scale: 1.05;
+}
