@@ -1,10 +1,12 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 *{
     font-family:Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat',sans-serif;
+    box-sizing: border-box;
+    
 }
-
 
 li{
     list-style: none;
@@ -15,7 +17,7 @@ li{
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(94, 91, 91, 0.811);
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
 }
 .nav-items{
     display: flex;
@@ -26,4 +28,11 @@ li{
 
 .paddings{
     padding: 1rem 2rem;
+}
+
+@media (min-width:1280px) {
+    .maxWidth{
+        max-width: 1200px;
+        margin: auto;
+    }
 }

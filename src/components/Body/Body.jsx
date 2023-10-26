@@ -3,6 +3,7 @@ import { GET_RES_API_URL } from "../../utils/mockData";
 import { useEffect, useState } from "react";
 import "./Body.css";
 import Shimmer from "../Shimmer/Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [resList, setResList] = useState([]);
@@ -37,7 +38,7 @@ const Body = () => {
 
   return (
     <div className="body paddings">
-      <div className="filter">
+      <div className="filter ">
         <div className="search">
           <input
             type="text"
@@ -48,14 +49,14 @@ const Body = () => {
             }}
             value={searchText}
           />
-          <button className="btn"   
-          onClick={()=>{
-            const filteredRestaurant = resList.filter((res) =>
-              res.info.name.toLowerCase().includes(searchText.toLowerCase())
-            );
-            setfilteredRestaurant(filteredRestaurant);
-           
-          }}
+          <button
+            className="btn"
+            onClick={() => {
+              const filteredRestaurant = resList.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setfilteredRestaurant(filteredRestaurant);
+            }}
           >
             Search
           </button>
@@ -63,7 +64,9 @@ const Body = () => {
         <button
           className="btn"
           onClick={() =>
-            setResList((res) => res.filter((item) => item.info.avgRating >= 4))
+            setfilteredRestaurant((res) =>
+              res.filter((item) => item.info.avgRating >= 4)
+            )
           }
         >
           Top Rated Restaurents
@@ -71,7 +74,9 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurant?.map((eachRes) => (
-          <RestaurentCard res={eachRes} key={eachRes.info.id} />
+          <Link to={"/restaurants/" + eachRes.info.id} key={eachRes.info.id} className="Link">
+            <RestaurentCard res={eachRes} />
+          </Link>
         ))}
       </div>
     </div>

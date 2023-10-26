@@ -1,27 +1,34 @@
-.body{
+.body {
     display: flex;
     flex-direction: column;
-    
+
 }
-.filter{
+
+.filter {
+    padding-left: .92rem;
     margin: 1rem 0;
     display: flex;
     gap: 1rem;
 }
-.search{
+
+.search {
     display: flex;
     gap: .5rem;
 }
 
-.search-input{
+.res-container {
+    margin: auto;
+}
+
+.search-input {
     padding: 1rem 2rem;
     outline: none;
     border-radius: 5px;
-    border:  2px solid black;
+    border: 2px solid black;
 }
 
 @media (min-width:1280px) {
-    .body{
+    .body {
         max-width: 1200px;
         margin: auto;
     }
