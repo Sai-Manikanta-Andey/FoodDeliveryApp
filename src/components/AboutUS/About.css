@@ -1,0 +1,13 @@
+.title{
+    text-align: center;
+    margin:1rem 0;
+}
+
+
+
+@media (min-width:1280px) {
+    .about-container {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
